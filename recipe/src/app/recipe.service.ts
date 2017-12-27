@@ -6,133 +6,51 @@ export class RecipeService {
   recipes = [
     {
       id: 1,
-      mealTime: 'breakfast',
-      title: 'Recipe 1',
-      image: 'https://static.pexels.com/photos/76093/pexels-photo-76093.jpeg',
-      ingredients: [
-        {
-          amount: 2,
-          measurement: 'Cup',
-          ingredient: 'Sugar'
-        },
-        {
-          amount: 2,
-          measurement: 'Cup',
-          ingredient: 'Sugar'
-        },
-        {
-          amount: 2,
-          measurement: 'Cup',
-          ingredient: 'Sugar'
-        }
-      ],
-      directions: [
-        {
-          icon: 'mix',
-          direction: 'Mix in the sugar'
-        },
-        {
-          icon: 'stir',
-          direction: 'stir in the sugar'
-        }
-      ]
-    },
-    {
-      id: 2,
-      mealTime: 'lunch',
-      title: 'Recipe 2',
-      image: 'https://static.pexels.com/photos/76093/pexels-photo-76093.jpeg',
-      ingredients: [
-        {
-          amount: 2,
-          measurement: 'Cup',
-          ingredient: 'Sugar'
-        },
-        {
-          amount: 2,
-          measurement: 'Cup',
-          ingredient: 'Sugar'
-        },
-        {
-          amount: 2,
-          measurement: 'Cup',
-          ingredient: 'Sugar'
-        }
-      ],
-      directions: [
-        {
-          icon: 'mix',
-          direction: 'Mix in the sugar'
-        },
-        {
-          icon: 'stir',
-          direction: 'stir in the sugar'
-        }
-      ]
-    },
-    {
-      id: 3,
-      mealTime: 'dinner',
-      title: 'Recipe 3',
-      image: 'https://static.pexels.com/photos/76093/pexels-photo-76093.jpeg',
-      ingredients: [
-        {
-          amount: 2,
-          measurement: 'Cup',
-          ingredient: 'Sugar'
-        },
-        {
-          amount: 2,
-          measurement: 'Cup',
-          ingredient: 'Sugar'
-        },
-        {
-          amount: 2,
-          measurement: 'Cup',
-          ingredient: 'Sugar'
-        }
-      ],
-      directions: [
-        {
-          icon: 'mix',
-          direction: 'Mix in the sugar'
-        },
-        {
-          icon: 'stir',
-          direction: 'stir in the sugar'
-        }
-      ]
-    },
-    {
-      id: 4,
       mealTime: 'dessert',
       title: 'Recipe 4',
       image: 'https://static.pexels.com/photos/76093/pexels-photo-76093.jpeg',
       ingredients: [
         {
-          amount: 2,
-          measurement: 'Cup',
+          amount: 5,
+          measurement: 'Cups',
           ingredient: 'Sugar'
         },
         {
-          amount: 2,
+          amount: 1,
           measurement: 'Cup',
-          ingredient: 'Sugar'
+          ingredient: 'Vanilla Extract'
         },
         {
           amount: 2,
-          measurement: 'Cup',
-          ingredient: 'Sugar'
+          measurement: 'Cups',
+          ingredient: 'Chocolate Chips'
         }
       ],
       directions: [
         {
           icon: 'mix',
-          direction: 'Mix in the sugar'
+          direction: 'Mix in 1 cup of sugar',
+          ingredientPosition: 0,
+          ingredientAmount: 1,
+          clicked: false
         },
         {
           icon: 'stir',
-          direction: 'stir in the sugar'
+          direction: 'Stir in 4 cups of sugar',
+          ingredientPosition: 0,
+          ingredientAmount: 4,
+          clicked: false
+        }
+      ],
+      nutritonalInfo: [
+        {
+          calories: 500,
+          protien: 'string?',
+          carbs: 'string?',
+          fat: 'string?',
+          sugar: 'string?',
+          sodium: 'string?',
+          fiber: 'string?'
         }
       ]
     }
@@ -147,6 +65,10 @@ export class RecipeService {
     return this.recipes.filter((recipe) => {
       return recipe.mealTime === chosenList;
     });
+  }
+
+  getRecipe(recipeID) {
+    return this.recipes.find(x => x.id === recipeID);
   }
 
 }
