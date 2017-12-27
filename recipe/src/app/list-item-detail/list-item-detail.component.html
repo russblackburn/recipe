@@ -1,14 +1,35 @@
 <img class="img-responsive" src="{{ recipe.image }}" alt="{{ recipe.title }}">
-<h2>{{ recipe.title }}</h2>
-<div>
-  <h3>Ingredients</h3>
-  <ul>
-    <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient.amount }} {{ ingredient.measurement}} {{ ingredient.ingredient}}</li>
-  </ul>
+<div class="container">
+  <h2>{{ recipe.title }}</h2>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10">
+      <div>
+          <h3>Ingredients</h3>
+          <ul>
+            <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient.amount }} {{ ingredient.measurement}} {{ ingredient.ingredient}}</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Directions</h3>
+          <ol>
+            <li *ngFor="let direction of recipe.directions; let i = index" (click)="onNewAmount(i)">{{ direction.direction }}</li>
+          </ol>
+        </div>
+      </div>
+    <div class="col-xs-12 col-sm-2">
+      <div>
+        <h3>Nutritional Information</h3>
+        <ul>
+          <li><span class="nutritionalInfoTitle">Calories:</span> {{ recipe.nutritionalInfo.calories }}</li>
+          <li><span class="nutritionalInfoTitle">Protien:</span> {{ recipe.nutritionalInfo.protien }}</li>
+          <li><span class="nutritionalInfoTitle">Carbs:</span> {{ recipe.nutritionalInfo.carbs }}</li>
+          <li><span class="nutritionalInfoTitle">Fat:</span> {{ recipe.nutritionalInfo.fat }}</li>
+          <li><span class="nutritionalInfoTitle">Sugar:</span> {{ recipe.nutritionalInfo.sugar }}</li>
+          <li><span class="nutritionalInfoTitle">Sodium:</span> {{ recipe.nutritionalInfo.sodium }}</li>
+          <li><span class="nutritionalInfoTitle">Fiber:</span> {{ recipe.nutritionalInfo.fiber }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
-<div>
-  <h3>Directions</h3>
-  <ol>
-    <li *ngFor="let direction of recipe.directions; let i = index" (click)="onNewAmount(i)">{{ direction.direction }}</li>
-  </ol>
-</div>
+

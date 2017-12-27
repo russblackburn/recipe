@@ -11,17 +11,17 @@ export class RecipeService {
       image: 'https://static.pexels.com/photos/76093/pexels-photo-76093.jpeg',
       ingredients: [
         {
-          amount: 5,
+          amount: '1/2',
           measurement: 'Cups',
           ingredient: 'Sugar'
         },
         {
-          amount: 1,
+          amount: '1',
           measurement: 'Cup',
           ingredient: 'Vanilla Extract'
         },
         {
-          amount: 2,
+          amount: '2',
           measurement: 'Cups',
           ingredient: 'Chocolate Chips'
         }
@@ -29,30 +29,28 @@ export class RecipeService {
       directions: [
         {
           icon: 'mix',
-          direction: 'Mix in 1 cup of sugar',
+          direction: 'Mix in 1/4 cup of sugar',
           ingredientPosition: 0,
-          ingredientAmount: 1,
+          ingredientAmount: '1/4',
           clicked: false
         },
         {
           icon: 'stir',
-          direction: 'Stir in 4 cups of sugar',
+          direction: 'Stir in 1/4 cups of sugar',
           ingredientPosition: 0,
-          ingredientAmount: 4,
+          ingredientAmount: '1/4',
           clicked: false
         }
       ],
-      nutritonalInfo: [
-        {
-          calories: 500,
-          protien: 'string?',
-          carbs: 'string?',
-          fat: 'string?',
-          sugar: 'string?',
-          sodium: 'string?',
-          fiber: 'string?'
-        }
-      ]
+      nutritionalInfo: {
+        calories: 500,
+        protien: 'string?',
+        carbs: 'string?',
+        fat: 'string?',
+        sugar: 'string?',
+        sodium: 'string?',
+        fiber: 'string?'
+      }
     }
   ];
 
