@@ -9,23 +9,51 @@
 /* title section */
 
 /* ingredients section */
+.ingredientZero {
+  text-decoration: line-through;
+}
 
 /* directions section */
+#directions {
+  margin: 20px 0;
+}
+
+#directionList {
+  padding: 0;
+}
+
+#directionList li {
+  background-color: lightgray;
+  border-radius: 5px;
+  list-style-type: none;
+  padding: 20px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.directionClicked {
+  background-color: green!important;
+}
 
 /* nutritional information section */
 #nutritional {
-  background-color: lightgray;
+  background-color: #f2f2f2;
   padding: 15px;
   border-radius: 5px;
 }
 
 #nutritional h4 {
-  text-align: center;
+  /* text-align: center; */
   padding-top: 20px;
+  padding-left: 15px
 }
 
 .nutritionalInfoTitle {
   font-weight: bold;
+}
+
+#nutritional ul {
+  padding: 15px;
 }
 
 #nutritional ul li {
@@ -39,7 +67,7 @@ h3, h4 {
 }
 
 .sectionBackground {
-  background-color: yellow;
+  background-color: #f2f2f2;
   padding: 15px;
   border-radius: 5px;
 }

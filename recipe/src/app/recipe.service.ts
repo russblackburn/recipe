@@ -11,7 +11,7 @@ export class RecipeService {
       image: 'https://static.pexels.com/photos/76093/pexels-photo-76093.jpeg',
       ingredients: [
         {
-          amount: '1/2',
+          amount: '5 1/4',
           measurement: 'Cups',
           ingredient: 'Sugar'
         },
@@ -36,9 +36,16 @@ export class RecipeService {
         },
         {
           icon: 'stir',
-          direction: 'Stir in 1/4 cups of sugar',
+          direction: 'Stir in 5 cups of sugar',
           ingredientPosition: 0,
-          ingredientAmount: '1/4',
+          ingredientAmount: '5',
+          clicked: false
+        },
+        {
+          icon: 'bake',
+          direction: 'Bake for 30 minutes',
+          ingredientPosition: 0,
+          ingredientAmount: '0',
           clicked: false
         }
       ],
