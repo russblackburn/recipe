@@ -1,3 +1,45 @@
+/* image section */
+.recipeImage {
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* title section */
+
+/* ingredients section */
+
+/* directions section */
+
+/* nutritional information section */
+#nutritional {
+  background-color: lightgray;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+#nutritional h4 {
+  text-align: center;
+  padding-top: 20px;
+}
+
 .nutritionalInfoTitle {
   font-weight: bold;
+}
+
+#nutritional ul li {
+  padding: 15px 0;
+  list-style-type: none;
+}
+
+/* multiple sections */
+h3, h4 {
+  margin-top: 5px;
+}
+
+.sectionBackground {
+  background-color: yellow;
+  padding: 15px;
+  border-radius: 5px;
 }
