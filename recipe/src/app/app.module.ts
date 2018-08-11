@@ -12,6 +12,7 @@ import { RecipeService } from './recipe.service';
 import { ListItemDetailComponent } from './list-item-detail/list-item-detail.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { AboutComponent } from './about/about.component';
 
 const routes = [
   {
@@ -23,36 +24,14 @@ const routes = [
     component: ListItemDetailComponent
   },
   {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
     path: '**',
     redirectTo: 'recipes/all'
   }
 ];
-
-// const routes = [
-//   {
-//     path: 'characters',
-//     component: TabsComponent,
-//     children: [
-//       {
-//         path: '',
-//         redirectTo: 'all',
-//         pathMatch: 'full'
-//       },
-//       {
-//         path: ':side',
-//         component: ListComponent
-//       }
-//     ]
-//   },
-//   {
-//     path: 'new-character',
-//     component: CreateCharacterComponent
-//   },
-//   {
-//     path: '**',
-//     redirectTo: '/characters'
-//   }
-// ];
 
 @NgModule({
   declarations: [
@@ -63,11 +42,12 @@ const routes = [
     ListItemComponent,
     ListItemDetailComponent,
     SearchBarComponent,
-    DropdownDirective
+    DropdownDirective,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {useHash: true}) // use hash in url
   ],
   providers: [
     RecipeService

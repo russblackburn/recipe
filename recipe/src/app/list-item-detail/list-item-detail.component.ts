@@ -11,6 +11,7 @@ import { Recipe } from '../models/recipe.model';
 export class ListItemDetailComponent implements OnInit {
 
   recipe: Recipe;
+  iconClicked = '';
 
   constructor(private activatedRoute: ActivatedRoute, private recipeService: RecipeService) { }
 
@@ -21,20 +22,28 @@ export class ListItemDetailComponent implements OnInit {
   }
 
   onNewAmount(i) {
-    const ingredientPosition = this.recipe.directions[i].ingredientPosition;
-    const directionsAmount = this.amountToNumber(this.recipe.directions[i].ingredientAmount);
     const clicked = this.recipe.directions[i].clicked;
 
+    this.recipe.directions[i].ingredientPosition.forEach((element, index) => {
+      const ingredientPosition = this.recipe.directions[i].ingredientPosition[index];
+      const directionsAmount = this.amountToNumber(this.recipe.directions[i].ingredientAmount[index]);
+
+      if (!clicked) {
+        let ingredientsAmount = this.amountToNumber(this.recipe.ingredients[ingredientPosition].amount);
+        ingredientsAmount -= directionsAmount;
+        this.recipe.ingredients[ingredientPosition].amount = this.amountToString(ingredientsAmount);
+      } else {
+        let ingredientsAmount = this.amountToNumber(this.recipe.ingredients[ingredientPosition].amount);
+        ingredientsAmount += directionsAmount;
+        this.recipe.ingredients[ingredientPosition].amount = this.amountToString(ingredientsAmount);
+      }
+    });
     if (!clicked) {
-      let ingredientsAmount = this.amountToNumber(this.recipe.ingredients[ingredientPosition].amount);
-      ingredientsAmount -= directionsAmount;
-      this.recipe.ingredients[ingredientPosition].amount = this.amountToString(ingredientsAmount);
       this.recipe.directions[i].clicked = true;
+      this.recipe.directions[i].icon += '-2';
     } else {
-      let ingredientsAmount = this.amountToNumber(this.recipe.ingredients[ingredientPosition].amount);
-      ingredientsAmount += directionsAmount;
-      this.recipe.ingredients[ingredientPosition].amount = this.amountToString(ingredientsAmount);
       this.recipe.directions[i].clicked = false;
+      this.recipe.directions[i].icon = this.recipe.directions[i].icon.replace('-2', '');
     }
   }
 

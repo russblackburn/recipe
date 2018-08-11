@@ -1,6 +1,7 @@
 export class NutritionalInfo {
   constructor(
-    public calories: number,
+    public servingSize: string,
+    public calories: string,
     public protien: string,
     public carbs: string,
     public fat: string,

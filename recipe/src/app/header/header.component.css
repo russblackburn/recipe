@@ -1,3 +1,22 @@
 nav.navbar.navbar-default {
   margin: 0;
 }
+
+* {
+  border-radius: 0!important;
+}
+
+.logoStyle {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: -1px;
+}
+
+#you {
+  font-weight: 700;
+  color: #FF9600;
+}
+
+#food {
+  margin-left: -3px;
+}

@@ -10,6 +10,7 @@ export class Recipe {
     public image: string,
     public ingredients: Ingredients[],
     public directions: Directions[],
+    public additionalNotes: string,
     public nutritionalInfo: NutritionalInfo
   ) {}
 }

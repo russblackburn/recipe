@@ -7,15 +7,45 @@
 }
 
 /* title section */
+div {
+  color: #7A7A7A;
+}
+
+h2, h3, h4 {
+  text-transform: uppercase;
+}
+
 
 /* ingredients section */
-.ingredientZero {
+.ingredients {
+  padding: 0;
+}
+
+.ingredients li:first-child {
+  border-top: solid 1px #FF9600;
+}
+
+.ingredients li {
+  border-bottom: 1px solid #FF9600;
+  list-style-type: none;
+  padding: 20px;
+}
+
+.ingredientZero div div {
   text-decoration: line-through;
+}
+
+.ingredientIcon {
+  width: 24px;
+  margin: -3px 0 0 0;
+  padding: 0;
+  position: absolute;
 }
 
 /* directions section */
 #directions {
   margin: 20px 0;
+  padding-top: 10px;
 }
 
 #directionList {
@@ -23,29 +53,56 @@
 }
 
 #directionList li {
-  background-color: lightgray;
+  background-color: #FF9600;
   border-radius: 5px;
   list-style-type: none;
+  border: 1px solid #FF9600;
   padding: 20px;
-  margin: 20px;
   cursor: pointer;
+  color: white;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+
+#directionList li:hover {
+  background-color: #FFA500;
 }
 
 .directionClicked {
-  background-color: green!important;
+background-color: rgba(255, 165, 0, 0.60)!important;
+color: white!important;
+}
+
+.icon {
+  width: 40px;
+}
+
+.directionsText {
+  color: white;
+}
+
+/* additional notes */
+#additionalNotesTitle {
+  margin-top: 50px;
+  border-bottom: 1px solid #FF9600;
+  padding-bottom: 15px;
+}
+
+#additionalNotes {
+  line-height: 1.5em;
+  margin-bottom: 25px;
 }
 
 /* nutritional information section */
 #nutritional {
-  background-color: #f2f2f2;
-  padding: 15px;
+  border: 1px solid #eeeeee;
   border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 #nutritional h4 {
-  /* text-align: center; */
-  padding-top: 20px;
-  padding-left: 15px
+  padding-bottom: 10px;
 }
 
 .nutritionalInfoTitle {
@@ -53,21 +110,24 @@
 }
 
 #nutritional ul {
-  padding: 15px;
+  padding: 0;
 }
 
 #nutritional ul li {
-  padding: 15px 0;
   list-style-type: none;
+  padding: 15px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+#nutritional ul li:first-child {
+  border-top: 1px solid #eeeeee;
 }
 
 /* multiple sections */
-h3, h4 {
-  margin-top: 5px;
-}
 
-.sectionBackground {
-  background-color: #f2f2f2;
-  padding: 15px;
-  border-radius: 5px;
+
+@media (min-width: 992px) {
+  .ingredients {
+    width: 70%;
+  }
 }

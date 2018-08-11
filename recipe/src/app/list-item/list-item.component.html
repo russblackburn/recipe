@@ -1,6 +1,8 @@
-<div class="col-sm-4">
-  <a style="cursor: pointer" [routerLink]="'/recipes/' + mealTime + '/' + recipe.id">
-      <img class="img-responsive" src="{{ recipe.image }}">
-      <h2>{{ recipe.title }}</h2>
-  </a>
+<div class="col-xs-12 col-sm-6 col-md-4 mainDiv">
+  <div class="backgroundTransition">
+      <a style="cursor: pointer" [routerLink]="'/recipes/' + mealTime + '/' + recipe.id">
+        <div class="recipeImage" [ngStyle]="{'background-image': 'url(' + recipe.image + ')'}"></div>
+        <h2>{{ slicedTitle }}</h2>
+    </a>
+  </div>
 </div>
