@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>About</h2>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+        <img class="aboutImage" src="assets/about/tiff.jpg" alt="Tiffani">
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <h3 id="me">Me</h3>
+      <hr>
+      <p>Hi, my name is Tiffani! I established this website for you hoping to provide a place where you can find simple, healthy, affordable, and tasty recipes. Whether you're heading off on your own for the first time or you're a seasoned cook just looking for new recipes, there's something here for you. Check out my blog for meal plans and other food info.</p>
+      <a target="_blank" class="btn btn-primary" href="http://today-an-issue-tomorrow-solved.blogspot.com/?m=1">Blog</a>
+      <h3>Recipes</h3>
+      <hr>
+      <p>When you’re making a recipe, click on each direction as you complete it. The color will fade to show that you have completed that step, and the ingredient will be subtracted from the list of ingredients. Let’s say a recipe calls for 3 cups of milk, and the first step is to use 2 cups of milk. Once you click on that step, saying that you did it, the ingredients will say 1 cup of milk instead of the 3 cups of milk. I love this feature because it helps to prevent me from jumbling up a whole recipe and wasting ingredients simply from misreading a direction.</p>
+      <h3>Nutritional Info</h3>
+      <hr>
+      <p>For every recipe, you will find a section filled with its nutritional information. This can help you determine which recipes are right for your own dietary needs. I have included calories as well as the major essential nutrients and those of typical interest.</p>
+      <p>I hope this website can help you reach your nutritional needs and goals. Enjoy!</p>
+    </div>
+  </div>
+</div>
+<div class="directionIcons">
+    <div class="row">
+        <div *ngFor="let icon of icons; let i = index" class="col-xs-4 col-md-3 col-lg-1 icon"><img src="assets/icons/{{ icon }}.png"></div>
+      <!-- <div *ngFor="let icon of icons; let i = index" (mouseenter)="onEnter(i)" (mouseleave)="onLeave(i)" class="col-xs-4 col-md-3 col-lg-1 icon"><img src="assets/icons/{{ icon }}.png"></div> -->
+    </div>
+  </div>
+

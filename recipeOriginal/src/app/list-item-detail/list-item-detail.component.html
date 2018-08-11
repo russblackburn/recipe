@@ -1,0 +1,36 @@
+<div class="recipeImage" [ngStyle]="{'background-image': 'url(' + recipe.image + ')'}"></div>
+<div class="container">
+  <h2>{{ recipe.title }}</h2>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-9">
+      <div>
+          <h3>Ingredients</h3>
+          <ul class="ingredients">
+            <li [ngClass]="{'ingredientZero': ingredient.amount === '0'}" *ngFor="let ingredient of recipe.ingredients"><div class="row"><div class="col-xs-2 col-sm-1"><div *ngIf="ingredient.icon != 'none'"><img class="ingredientIcon" src="assets/ingredientIcons/{{ ingredient.icon }}.png"></div></div><div class="col-xs-10 col-sm-11">{{ ingredient.amount }} {{ ingredient.measurement}} {{ ingredient.ingredient}}</div></div></li>
+          </ul>
+      </div>
+        <div id="directions">
+          <h3>Directions</h3>
+          <ol id="directionList">
+            <li [class.directionClicked]="direction.clicked == true" *ngFor="let direction of recipe.directions; let i = index" (click)="onNewAmount(i)"><div class="row"><div class="col-xs-2 col-sm-1"><img class="icon" src="assets/icons/{{ direction.icon }}.png"></div><div class="col-xs-10 col-sm-11 directionsText">{{ direction.direction }}</div></div></li>
+          </ol>
+        </div>
+      </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div id="nutritional">
+        <h4>Nutritional Info</h4>
+        <ul>
+          <li><span class="nutritionalInfoTitle">Calories:</span> {{ recipe.nutritionalInfo.calories }}</li>
+          <li><span class="nutritionalInfoTitle">Protien:</span> {{ recipe.nutritionalInfo.protien }}</li>
+          <li><span class="nutritionalInfoTitle">Carbs:</span> {{ recipe.nutritionalInfo.carbs }}</li>
+          <li><span class="nutritionalInfoTitle">Fat:</span> {{ recipe.nutritionalInfo.fat }}</li>
+          <li><span class="nutritionalInfoTitle">Sugar:</span> {{ recipe.nutritionalInfo.sugar }}</li>
+          <li><span class="nutritionalInfoTitle">Sodium:</span> {{ recipe.nutritionalInfo.sodium }}</li>
+          <li><span class="nutritionalInfoTitle">Fiber:</span> {{ recipe.nutritionalInfo.fiber }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+

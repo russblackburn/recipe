@@ -1,0 +1,121 @@
+/* image section */
+.recipeImage {
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* title section */
+div {
+  color: #7A7A7A;
+}
+
+h2, h3, h4 {
+  text-transform: uppercase;
+}
+
+
+/* ingredients section */
+.ingredients {
+  padding: 0;
+}
+
+.ingredients li:first-child {
+  border-top: solid 1px #FF9600;
+}
+
+.ingredients li {
+  border-bottom: 1px solid #FF9600;
+  list-style-type: none;
+  padding: 20px;
+}
+
+.ingredientZero div div {
+  text-decoration: line-through;
+}
+
+.ingredientIcon {
+  width: 24px;
+  margin: -3px 0 0 0;
+  padding: 0;
+  position: absolute;
+}
+
+/* directions section */
+#directions {
+  margin: 20px 0;
+  padding-top: 10px;
+}
+
+#directionList {
+  padding: 0;
+}
+
+#directionList li {
+  background-color: #FF9600;
+  border-radius: 5px;
+  list-style-type: none;
+  border: 1px solid #FF9600;
+  padding: 20px;
+  cursor: pointer;
+  color: white;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+
+#directionList li:hover {
+  background-color: #FFA500;
+}
+
+.directionClicked {
+background-color: rgba(255, 165, 0, 0.60)!important;
+color: white!important;
+}
+
+.icon {
+  width: 40px;
+}
+
+.directionsText {
+  color: white;
+}
+
+/* nutritional information section */
+#nutritional {
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#nutritional h4 {
+  padding-bottom: 10px;
+}
+
+.nutritionalInfoTitle {
+  font-weight: bold;
+}
+
+#nutritional ul {
+  padding: 0;
+}
+
+#nutritional ul li {
+  list-style-type: none;
+  padding: 15px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+#nutritional ul li:first-child {
+  border-top: 1px solid #eeeeee;
+}
+
+/* multiple sections */
+
+
+@media (min-width: 992px) {
+  .ingredients {
+    width: 60%;
+  }
+}
